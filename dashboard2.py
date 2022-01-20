@@ -207,8 +207,8 @@ tab3_layout = [
 
 tab4_layout = [
     html.Div([
-        html.H3("Regression of daily cases and residential movements"),
-        html.P("Using linear regression, we explore if there is any correlation between daily cases and residential mobility in each states, and are the trends \
+        html.H3("Scatterplot of daily cases and residential movements"),
+        html.P("Using scatterplot to visualize trends between daily cases and residential mobility in each states, and are the trends \
         in each states consistent"),
         dcc.Dropdown(
             id = "regression_drop",
@@ -263,7 +263,7 @@ def render_content(tab, var, chart,disease,pca_type, google_drop, residential_dr
         dff = df3[df3["States"] == regress_drop]
         dff = dff.dropna()
         #fig = px.scatter(df3[df3["States"] == regress_drop], x="residential_percent_change_from_baseline", y="Daily cases", height=600, trendline = "ols")
-        fig = px.scatter(dff, x="residential_percent_change_from_baseline", y="Daily cases", trendline = "ols")
+        fig = px.scatter(dff, x="residential_percent_change_from_baseline", y="Daily cases")
         
         fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'}, yaxis={'title':'daily cases'},
                       title={'text':f'covid cases against residential movement changes in {regress_drop}',
