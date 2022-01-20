@@ -150,8 +150,7 @@ tab0_layout = [
 
 tab5_layout = [
     html.Div([
-        html.H4("Common pre-existing health condition and breakdown of death cases by gender (national aggregate)"),
-        html.Footer("Dodi yzw")
+        html.H4("Common pre-existing health condition and breakdown of death cases by gender (national aggregate)")
     ])
 ]
 
