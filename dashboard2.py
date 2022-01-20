@@ -267,7 +267,7 @@ def render_content(tab, var, chart,disease,pca_type, google_drop, residential_dr
                       'font':{'size':28},'x':0.5,'xanchor':'center'}, xaxis = {"title" : "residential change from baseline"})
         return fig
     elif tab == 'tab-2':
-        print(google_drop)
+        #print(google_drop)
         fig = px.scatter(df3[df3["States"] == google_drop], x = "date", y=["retail_and_recreation_percent_change_from_baseline", \
                         "grocery_and_pharmacy_percent_change_from_baseline", "parks_percent_change_from_baseline", "transit_stations_percent_change_from_baseline", \
                         "workplaces_percent_change_from_baseline", "residential_percent_change_from_baseline"])
