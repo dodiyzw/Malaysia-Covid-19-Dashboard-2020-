@@ -262,7 +262,7 @@ def render_content(tab, var, chart,disease,pca_type, google_drop, residential_dr
         #print(regress_drop) 
         #dff = df3[df3["States"] == regress_drop]
         #fig = px.scatter(df3[df3["States"] == regress_drop], x="residential_percent_change_from_baseline", y="Daily cases", height=600, trendline = "ols")
-        fig = px.scatter(df3[df3["States"] == regress_drop], x="residential_percent_change_from_baseline", y="Daily cases")
+        fig = px.scatter(df3[df3["States"] == regress_drop], x="residential_percent_change_from_baseline", y="Daily cases", trendline = "ols")
         
         fig.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)', 'paper_bgcolor': 'rgba(0, 0, 0, 0)'}, yaxis={'title':'daily cases'},
                       title={'text':f'covid cases against residential movement changes in {regress_drop}',
